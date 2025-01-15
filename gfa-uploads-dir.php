@@ -14,5 +14,6 @@ if ( !defined( 'ABSPATH' ) ) {
 
 add_filter( 'groups_file_access_uploads_dir', 'example_groups_file_access_uploads_dir' );
 function example_groups_file_access_uploads_dir( $gfa_uploads_dir ) {
-	return '/srv/www/echamicrobiology.com/current/web/app/uploads/groups-file-access';
+	$gfa_uploads_dir = '/your/custom/dir/path/here';
+	return $gfa_uploads_dir;
 }
